@@ -2,7 +2,7 @@
 
 ## Screenshots
 
-<img src="./src/images/screenshot.png" alt="kulina" width="700px" height="800px"/>
+<img src="./src/images/screenshot.png" alt="kulina" width="700px"/>
 
 ## Author
 
