@@ -1,13 +1,15 @@
 import React, { useState } from "react";
 import { connect } from "react-redux";
-import down from "../images/down.png";
+import back from "../images/back.png";
 import Modal from "../component/modal/modal_location";
 
 const Navs = () => {
   return (
     <div className="navs">
       <div style={{ display: "flex", width: "100%" }}>
-        <div style={{ width: "10%", padding: "5px" }}></div>
+        <div style={{ width: "15%", padding: "15px" }}>
+          <img src={back} alt="down" width="20px" />
+        </div>
         <div>
           <div>alamat pengataran</div>
           <div style={{ display: "flex" }}>

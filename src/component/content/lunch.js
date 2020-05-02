@@ -4,6 +4,7 @@ import { increment } from "../../_action/state";
 import Box from "../box";
 import news from "../../images/chiken.jpg";
 import star from "../../images/star.png";
+import shop from "../../images/shop.png";
 
 const Lunch = () => {
   const [count, setCount] = useState(0);
@@ -15,35 +16,68 @@ const Lunch = () => {
   };
 
   return (
-    <div className="containers-1">
-      <Box variant="lg">
-        <div style={{ display: "flex", width: "100%" }}>
-          <div className="new">
-            <img src={news} alt="news" width="330px" height="220px" />
-          </div>
-          <div style={{ margin: "20px" }}>
-            {count}
-            <div className="op">
-              4,6 <img src={star} alt="star" width="15px" />
-              <img src={star} alt="star" width="15px" />
-              <img src={star} alt="star" width="15px" />
-              <img src={star} alt="star" width="15px" />
-              <img src={star} alt="star" width="15px" />
-              <h4>Roasted Chicken with Scramble Egg</h4>
-              <p>By. kulina </p>
-              <h4>Rp. 300.000 </h4>
+    <>
+      <div className="containers-1">
+        <Box variant="lg">
+          <div style={{ width: "100%" }}>
+            <div className="new">
+              <img src={news} alt="news" width="330px" height="220px" />
+            </div>
+            <div>
+              <div className="op">
+                4,6 <img src={star} alt="star" width="15px" />
+                <img src={star} alt="star" width="15px" />
+                <img src={star} alt="star" width="15px" />
+                <img src={star} alt="star" width="15px" />
+                <img src={star} alt="star" width="15px" />
+                <h4>Roasted Chicken with Scramble Egg</h4>
+                By. kulina
+                <h4>Rp. 300.000 </h4>
+                <div style={{ textAlign: "right" }}>
+                  <button className="add" onClick={inc}>
+                    add +
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <div style={{ margin: " 150px 40px 0px 80px" }}>
-              <button className="add" onClick={inc}>
-                add +
-              </button>
+        </Box>
+      </div>
+      <div>
+        {count > 0 ? (
+          <div
+            style={{
+              backgroundColor: "#a23530",
+              padding: "10px",
+              position: "fixed",
+              bottom: -10,
+
+              left: 0,
+              borderRadius: "10px",
+              width: "100%",
+              color: "white",
+            }}
+          >
+            <div style={{ display: "flex", justifyContent: "space-between" }}>
+              <div>
+                <b>{count} Item | Rp. 50.000</b>
+                <p style={{ fontSize: "16px" }}>termasuk ongkos kirim</p>
+              </div>
+
+              <div>
+                <img
+                  src={shop}
+                  alt="news"
+                  width="30px"
+                  height="30px"
+                  style={{ marginTop: "10px" }}
+                />
+              </div>
             </div>
           </div>
-        </div>
-      </Box>
-    </div>
+        ) : null}
+      </div>
+    </>
   );
 };
 
