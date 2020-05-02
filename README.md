@@ -5,5 +5,5 @@ then
 NPM INSTALL 
 
 #SCREENSHOT
-<img src="./" alt="kulina"/>
+<img src="./src/images/screenshot.png" alt="kulina"/>
 
